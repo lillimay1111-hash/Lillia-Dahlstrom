@@ -1,0 +1,524 @@
+/* =========================================
+   UNIVERSAL WEBSITE LAYOUT
+   ========================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f2ed;
+    color: #222;
+}
+
+
+/* =========================================
+   MAIN WEBSITE CONTAINER
+   ========================================= */
+
+.site-wrapper {
+    width: min(1200px, 94%);
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    display: grid;
+
+    /* Logo | Header information */
+    grid-template-columns: 180px 1fr;
+
+    min-height: 115px;
+
+    border-bottom: 1px solid #222;
+}
+
+
+/* Logo */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #222;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+    padding: 20px;
+}
+
+.site-logo a {
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* Header information */
+
+.header-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-description {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 15px 30px;
+
+    border-bottom: 1px solid #222;
+}
+
+
+/* =========================================
+   TOP NAVIGATION
+   ========================================= */
+
+.top-navigation {
+    min-height: 52px;
+}
+
+.top-navigation ul {
+    list-style: none;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.top-navigation li {
+    display: flex;
+}
+
+.top-navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 25px;
+
+    color: #222;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    border-right: 1px solid #222;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.top-navigation li:first-child a {
+    border-left: 1px solid #222;
+}
+
+.top-navigation a:hover,
+.top-navigation a.active {
+    background-color: #222;
+    color: white;
+}
+
+
+/* =========================================
+   MAIN GRID
+   ========================================= */
+
+.main-layout {
+
+    display: grid;
+
+    /*
+       Left navigation | Main content | Right sidebar
+    */
+    grid-template-columns: 180px minmax(0, 1fr) 180px;
+
+    min-height: 650px;
+}
+
+
+/* =========================================
+   LEFT NAVIGATION
+   ========================================= */
+
+.left-navigation {
+    border-right: 1px solid #222;
+
+    padding: 40px 25px;
+}
+
+.left-navigation h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.left-navigation ul {
+    list-style: none;
+}
+
+.left-navigation li {
+    margin-bottom: 15px;
+}
+
+.left-navigation a {
+    color: #222;
+    text-decoration: none;
+
+    display: block;
+
+    transition: padding-left 0.2s ease;
+}
+
+.left-navigation a:hover,
+.left-navigation a.active {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    min-width: 0;
+    padding: 30px;
+}
+
+
+/* Hero image */
+
+.hero {
+    width: 100%;
+    min-height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #222;
+
+    background-color: #eee;
+
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Hero text if no image */
+
+.hero-text {
+    text-align: center;
+    padding: 40px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CONTENT TYPOGRAPHY
+   ========================================= */
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h1,
+.content-section h2 {
+    margin-bottom: 15px;
+}
+
+.content-section h1 {
+    font-size: 2.2rem;
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+}
+
+.content-section p {
+    max-width: 750px;
+    margin-bottom: 15px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   RIGHT SIDEBAR
+   ========================================= */
+
+.right-sidebar {
+    border-left: 1px solid #222;
+
+    padding: 40px 20px;
+
+    position: relative;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 25px;
+}
+
+.right-sidebar h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.right-sidebar ul {
+    list-style: none;
+}
+
+.right-sidebar li {
+    margin-bottom: 15px;
+}
+
+.right-sidebar a {
+    color: #222;
+    text-decoration: none;
+}
+
+.right-sidebar a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+   ========================================= */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    display: block;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    border-top: 1px solid #222;
+
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+.footer-links a {
+    color: #222;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION BUTTON
+   ========================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    border: 1px solid #222;
+    background: white;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .main-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .site-header {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .left-navigation {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .site-wrapper {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+
+    /* Header */
+
+    .site-header {
+        display: block;
+    }
+
+    .site-logo {
+        min-height: 80px;
+
+        border-right: none;
+        border-bottom: 1px solid #222;
+    }
+
+
+    /* Top navigation */
+
+    .top-navigation ul {
+        flex-direction: column;
+    }
+
+    .top-navigation a {
+        width: 100%;
+
+        border-right: none;
+        border-bottom: 1px solid #222;
+    }
+
+    .top-navigation li:first-child a {
+        border-left: none;
+    }
+
+
+    /* Main layout */
+
+    .main-layout {
+        display: block;
+    }
+
+
+    /* Left navigation becomes horizontal section */
+
+    .left-navigation {
+        border-right: none;
+        border-bottom: 1px solid #222;
+
+        padding: 20px;
+    }
+
+    .left-navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .left-navigation li {
+        margin-bottom: 0;
+    }
+
+    .left-navigation a {
+        border: 1px solid #222;
+        padding: 8px 12px;
+    }
+
+    .left-navigation a:hover,
+    .left-navigation a.active {
+        padding-left: 12px;
+    }
+
+
+    /* Main content */
+
+    .main-content {
+        padding: 20px;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
